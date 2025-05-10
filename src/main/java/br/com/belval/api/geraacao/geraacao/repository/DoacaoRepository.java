@@ -1,5 +1,5 @@
 package br.com.belval.api.geraacao.geraacao.repository;
 
-public interface DoacaoRepository extends CrudRepository<> {
+public interface DoacaoRepository {
 
 }
