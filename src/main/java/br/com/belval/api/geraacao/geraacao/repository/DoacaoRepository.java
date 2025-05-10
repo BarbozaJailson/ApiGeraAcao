@@ -1,5 +1,9 @@
 package br.com.belval.api.geraacao.geraacao.repository;
 
-public interface DoacaoRepository extends CrudRepository<> {
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.belval.api.geraacao.geraacao.model.Doacao;
+
+public interface DoacaoRepository extends CrudRepository<Doacao, Integer> {
 
 }
