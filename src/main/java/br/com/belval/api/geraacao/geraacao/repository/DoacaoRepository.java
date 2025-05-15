@@ -6,4 +6,6 @@ import br.com.belval.api.geraacao.geraacao.model.Doacao;
 
 public interface DoacaoRepository extends CrudRepository<Doacao, Integer> {
 
+
 }
+
