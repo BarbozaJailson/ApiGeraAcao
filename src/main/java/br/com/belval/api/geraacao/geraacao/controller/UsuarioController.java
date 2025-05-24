@@ -51,9 +51,6 @@ public class UsuarioController {
 	
 	
 	//curl -X POST http://localhost:8080/usuarios -H "Content-Type: application/json; Charset=utf-8" -d @novo-usuario.json
-	//curl -X PUT http://localhost:8080/usuarios/1 -H "Content-Type: application/json; Charset=utf-8" -d @atualizar-usuario.json
-
-	
 	@PostMapping("/usuarios")
 	public ResponseEntity<Object> criarUsuario(@RequestBody Usuario usuario) {
 		
@@ -71,6 +68,8 @@ public class UsuarioController {
 				.body("Erro ao criar usuario"+ e.getMessage());
 	}
 }
+	
+	//curl -X PUT http://localhost:8080/usuarios/1 -H "Content-Type: application/json; Charset=utf-8" -d @atualizar-usuario.json
 	@PutMapping("/usuarios/{id}")
     public ResponseEntity<Object> atualizarProduto( 
             @PathVariable Integer id,
@@ -95,6 +94,7 @@ public class UsuarioController {
  		   
  	   }
 	
+	//curl -X DELETE http://localhost:8080/usuarios/1
 	@DeleteMapping("/usuarios/{id}")
     public ResponseEntity<Object> deletarUsuario(@PathVariable Integer id) {
         Optional<Usuario> usuario = usuarioRepository.findById(id);
