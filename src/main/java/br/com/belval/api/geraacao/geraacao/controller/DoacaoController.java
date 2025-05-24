@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,7 +55,7 @@ public class DoacaoController {
 		}
 	}
 	
-	//curl POST http://localhost:8080/doacoes -H "Content-Type: application/json; Charset=utf-8" -d @nova-doacao.json
+	//curl -X POST http://localhost:8080/doacoes -H "Content-Type: application/json; Charset=utf-8" -d @nova-doacao.json
 	@PostMapping("/doacoes")
 	public ResponseEntity <Object> save(@RequestBody Doacao doacao){
 		try {
@@ -88,7 +89,8 @@ public class DoacaoController {
 		}
 	}
 	
-	
+	//curl -X DELETE http://localhost:8080/doadores/1
+	@DeleteMapping("/doacoes")
 	public ResponseEntity <Object> delete(@PathVariable Integer id){
 		Optional<Doacao> doac = doacaoRepository.findById(id);
 		if(doac.isEmpty()) {

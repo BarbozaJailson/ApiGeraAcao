@@ -1,4 +1,5 @@
 {
+	
 	"nome_instituicao": "Nossa senho da escada",
 	"cnpj": 65452165000154,
 	"nome_doador": "Camille Monteiro",
@@ -9,5 +10,5 @@
 	"tipo": "Regata",
 	"data_cadastro": "2025-05-09",
 	"quantidade": 3,
-	"staus": "Coletado",
+	"staus": "Coletado"
 }

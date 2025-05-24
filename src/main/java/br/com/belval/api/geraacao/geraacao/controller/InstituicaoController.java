@@ -1,4 +1,4 @@
-package br.com.belval.api.geraacao.geraacao.controlle;
+package br.com.belval.api.geraacao.geraacao.controller;
 
 import java.util.Optional;
 
@@ -67,7 +67,7 @@ public class InstituicaoController {
 			}
 			
 			//Observação: para métodos que não sejam o GET e o POST é necessário colocar o -X(menos xis maiúsculo)
-			//curl -X PUT http://localhost:8080/instituicao/1 -H "Content-Type: application/json; Charset=utf-8" -d @instituicao-mortadela2.json
+			//curl -X PUT http://localhost:8080/instituicao/1 -H "Content-Type: application/json; Charset=utf-8" -d @atualizacao-instituicao.json
 			
 			@PutMapping("/instituicao/{id}")
 			public ResponseEntity<Object>atualizarInstituicao(
@@ -86,7 +86,7 @@ public class InstituicaoController {
 				
 				return ResponseEntity
 						.status(HttpStatus.OK)
-						.body("Instituição atualizada com sucesso");
+						.body(prod);
 			}
 			
 }
