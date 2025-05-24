@@ -89,8 +89,8 @@ public class DoacaoController {
 		}
 	}
 	
-	//curl -X DELETE http://localhost:8080/doadores/1
-	@DeleteMapping("/doacoes")
+	//curl -X DELETE http://localhost:8080/doacoes/1
+	@DeleteMapping("/doacoes/{id}")
 	public ResponseEntity <Object> delete(@PathVariable Integer id){
 		Optional<Doacao> doac = doacaoRepository.findById(id);
 		if(doac.isEmpty()) {
